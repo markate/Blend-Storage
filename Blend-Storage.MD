@@ -1,10 +1,8 @@
 一、主动存储
 
-主动存储主要考虑通过runtime为web提供存储大规模数据、文件的条件（每个轻应用
+主动存储主要考虑通过runtime为web提供存储大规模数据、文件的条件（每个轻应用创建一个私有的自己的文件存储路径
 
-创建一个私有的自己的文件存储路径，以及数据存储文件），并且提供接口给用户进行
-
-调用。 其API列表如下：
+，以及数据存储文件），并且提供接口给用户进行调用。 其API列表如下：
 
 组件名称：Blend.device.storage 
 
@@ -14,20 +12,20 @@ Native创建文件对数据进行存储、查询、删除。
 
 options 是一个object对象如下：
 <p>
-<code>
-    {
-		paras:{
-			appid:xxx,
-			key:(string)
-		},
-		callback:{
-			success:function(data){
-				//这里data代表返回的数据
-		},
-		fail:function(){}
+	<code>
+		{
+			paras:{
+				appid:xxx,
+				key:(string)
+			},
+			callback:{
+				success:function(data){
+					//这里data代表返回的数据
+			},
+			fail:function(){}
+			}
 		}
-	}
-</code>
+	</code>
 </p>
 功能：如存在则输出对应的JSON的字符串（下同）
 
