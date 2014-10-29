@@ -15,10 +15,10 @@ Native创建文件对数据进行存储、查询、删除。
 options 是一个object对象如下：
 <p>
 <code>
-	{
+    {
 		paras:{
-		appid:xxx,
-		key:(string)
+			appid:xxx,
+			key:(string)
 		},
 		callback:{
 			success:function(data){
