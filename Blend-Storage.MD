@@ -31,15 +31,15 @@ options 是一个object对象如下：
 options 是一个object对象如下：
 ```javascript
 {
-paras:{
-  appid:xxx,
-	key:(string),
-    value:{}
-},
-callback:{
-  success:function(data){},
-fail:function(){}
-}
+	paras:{
+		appid:xxx,
+		key:(string),
+		value:{}
+	},
+	callback:{
+		success:function(data){},
+		fail:function(){}
+	}
 }
 ```
 功能：设置存储的值。
@@ -48,14 +48,14 @@ fail:function(){}
 options 是一个object对象如下：
 ```javascript
 {
-paras:{
-	appid:xxx,
-	key:(string)
-},
-callback:{
-  success:function(data){},
-fail:function(){}
-}
+	paras:{
+		appid:xxx,
+		key:(string)
+	},
+	callback:{
+		success:function(data){},
+		fail:function(){}
+	}
 }
 ```
 功能：删除一个数据对象
@@ -64,13 +64,13 @@ fail:function(){}
 options 是一个object对象如下：
 ```javascript
 {
-paras:{
-	appid:xxx
-},
-callback:{
-  success:function(data){},
-fail:function(){}
-}
+	paras:{
+		appid:xxx
+	},
+	callback:{
+		success:function(data){},
+		fail:function(){}
+	}
 }
 ```
 功能：清除该域下所有的数据对象
@@ -79,15 +79,15 @@ fail:function(){}
 options 是一个object对象如下：
 ```javascript
 {
-paras:{
-	appid:xxx
-},
-callback:{
-  success:function(data){
-    size: 1024 
-},
-fail:function(){}
-}
+	paras:{
+		appid:xxx
+	},
+	callback:{
+	  success:function(data){
+		//size: 1024 
+	},
+	fail:function(){}
+	}
 }
 ```
 功能：获取剩余的数据存储空间数据存储的剩余空间
@@ -97,14 +97,14 @@ fail:function(){}
 options 是一个object对象如下：
 ```javascript
 {
-paras:{
-	 appid:xxx,
-   key:xxx，
- },
-callback:{
-    success:function(data){},
-fail:function(){}
-}
+	paras:{
+		 appid:xxx,
+	   key:xxx，
+	 },
+	callback:{
+		success:function(data){},
+		fail:function(){}
+	}
 }
 ```
 功能：获取文件的路径
@@ -125,15 +125,15 @@ getIDatatem实现。
 options 是一个object对象如下：
 ```javascript
 {
-paras:{
-   appid:xxx,
-   key:xxx，
-   value:”url”
-},
-callback:{
-    success:function(data){},
-fail:function(){}
-}
+	paras:{
+	   appid:xxx,
+	   key:xxx，
+	   value:”url”
+	},
+	callback:{
+		success:function(data){},
+		fail:function(){}
+	}
 }
 ```
 功能：存储文件
@@ -150,14 +150,14 @@ fail:function(){}
 options 是一个object对象如下：
 ```javascript
 {
-paras:{
-	appid:xxx,
-	key:(string)
-},
-callback:{
-  success:function(data){},
-fail:function(){}
-}
+	paras:{
+		appid:xxx,
+		key:(string)
+	},
+	callback:{
+		success:function(data){},
+		fail:function(){}
+	}
 }
 ```
 功能：删除一个文件对象
@@ -172,13 +172,13 @@ fail:function(){}
 options 是一个object对象如下：
 ```javascript
 {
-paras:{
-  appid:xxx
-},
-callback:{
-  success:function(data){},
-fail:function(){}
-}
+	paras:{
+	  appid:xxx
+	},
+	callback:{
+		success:function(data){},
+		fail:function(){}
+	}
 }
 ```
 功能：清除本域的所有文件对象，并且将数据存储中相应的key和value删除
@@ -188,13 +188,13 @@ options 是一个object对象如下：
 ```javascript
 {
 	appid:xxx,
-paras:{},
-callback:{
-  success:function(data){
-    size: 1024 
-},
-fail:function(){}
-}
+	paras:{},
+	callback:{
+	success:function(data){
+		//{size: 1024} 
+	},
+	fail:function(){}
+	}
 }
 ```
 功能：获取文件存储空间剩余大小（只返回文件存储空间）
