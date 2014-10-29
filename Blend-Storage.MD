@@ -13,6 +13,7 @@ Native创建文件对数据进行存储、查询、删除。
 1、getIDataItem(options)
 
 options 是一个object对象如下：
+<p>
 <code>
 	{
 		paras:{
@@ -27,6 +28,7 @@ options 是一个object对象如下：
 		}
 	}
 </code>
+</p>
 功能：如存在则输出对应的JSON的字符串（下同）
 
 2、setIDataItem(options)
