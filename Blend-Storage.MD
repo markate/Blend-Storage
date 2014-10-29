@@ -27,7 +27,7 @@ options 是一个object对象如下：
 ```
 功能：如存在则输出对应的JSON的字符串（下同）
 
-2、setIDataItem(options)
+###2、setIDataItem(options)
 options 是一个object对象如下：
 ```javascript
 {
@@ -44,7 +44,7 @@ fail:function(){}
 ```
 功能：设置存储的值。
 <code>
-3、removeDataItem(options)
+###3、removeDataItem(options)
 options 是一个object对象如下：
 ```javascript
 {
@@ -59,9 +59,10 @@ fail:function(){}
 }
 ```
 功能：删除一个数据对象
-```javascript
-4、removeAllDataItems(options)
+
+###4、removeAllDataItems(options)
 options 是一个object对象如下：
+```javascript
 {
 paras:{
 	appid:xxx
@@ -74,7 +75,7 @@ fail:function(){}
 ```
 功能：清除该域下所有的数据对象
 
-5、getDataStorageSize(options)
+###5、getDataStorageSize(options)
 options 是一个object对象如下：
 ```javascript
 {
@@ -91,7 +92,7 @@ fail:function(){}
 ```
 功能：获取剩余的数据存储空间数据存储的剩余空间
 
-6、getFileItem(options)
+###6、getFileItem(options)
 
 options 是一个object对象如下：
 ```javascript
@@ -119,7 +120,7 @@ fail:function(){}
 getIDatatem实现。
 
 
-7、setFileItem(options)
+###7、setFileItem(options)
 
 options 是一个object对象如下：
 ```javascript
@@ -145,7 +146,7 @@ fail:function(){}
 
 域）
 
-8、removeFileItem(options)
+###8、removeFileItem(options)
 options 是一个object对象如下：
 ```javascript
 {
@@ -167,7 +168,7 @@ fail:function(){}
 
 （2）	删除数据存储中对应的数据的key和value
 
-9、removeAllFileItems(options)
+###9、removeAllFileItems(options)
 options 是一个object对象如下：
 ```javascript
 {
@@ -182,7 +183,7 @@ fail:function(){}
 ```
 功能：清除本域的所有文件对象，并且将数据存储中相应的key和value删除
 
-10、getFileStorageSize(options)
+###10、getFileStorageSize(options)
 options 是一个object对象如下：
 ```javascript
 {
