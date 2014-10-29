@@ -1,4 +1,4 @@
-一、主动存储
+##一、主动存储
 
 主动存储主要考虑通过runtime为web提供存储大规模数据、文件的条件（每个轻应用创建一个私有的自己的文件存储路径
 
@@ -8,10 +8,9 @@
 
 Native创建文件对数据进行存储、查询、删除。
 
-1、getIDataItem(options)
+###1、getIDataItem(options)
 
 options 是一个object对象如下：
-<p>
 ```javascript
 {
 	paras:{
@@ -26,7 +25,6 @@ options 是一个object对象如下：
 	}
 }
 ```
-</p>
 功能：如存在则输出对应的JSON的字符串（下同）
 
 2、setIDataItem(options)
