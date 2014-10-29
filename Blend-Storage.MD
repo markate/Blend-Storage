@@ -11,7 +11,7 @@
 Native创建文件对数据进行存储、查询、删除。
 
 1、getIDataItem(options)
-
+<code>
 options 是一个object对象如下：
 {
 paras:{
@@ -25,10 +25,12 @@ callback:{
 fail:function(){}
 }
 }
+</code>
 功能：如存在则输出对应的JSON的字符串（下同）
 
 2、setIDataItem(options)
 options 是一个object对象如下：
+<code>
 {
 paras:{
   appid:xxx,
@@ -40,8 +42,9 @@ callback:{
 fail:function(){}
 }
 }
+</code>
 功能：设置存储的值。
-
+<code>
 3、removeDataItem(options)
 options 是一个object对象如下：
 {
@@ -54,8 +57,9 @@ callback:{
 fail:function(){}
 }
 }
+</code>
 功能：删除一个数据对象
-
+<code>
 4、removeAllDataItems(options)
 options 是一个object对象如下：
 {
@@ -67,8 +71,9 @@ callback:{
 fail:function(){}
 }
 }
+</code>
 功能：清除该域下所有的数据对象
-
+<code>
 5、getDataStorageSize(options)
 options 是一个object对象如下：
 {
@@ -82,11 +87,11 @@ callback:{
 fail:function(){}
 }
 }
-
+</code>
 功能：获取剩余的数据存储空间数据存储的剩余空间
 
 6、getFileItem(options)
-
+<code>
 options 是一个object对象如下：
 {
 paras:{
@@ -98,7 +103,7 @@ callback:{
 fail:function(){}
 }
 }
-
+</code>
 功能：获取文件的路径
 
 规则说明：
@@ -115,6 +120,7 @@ getIDatatem实现。
 7、setFileItem(options)
 
 options 是一个object对象如下：
+<code>
 {
 paras:{
    appid:xxx,
@@ -126,7 +132,7 @@ callback:{
 fail:function(){}
 }
 }
-
+</code>
 功能：存储文件
 
 存储文件实质上是存储数据+文件保存，即调用存储文件的api时，调用文件存
@@ -139,6 +145,7 @@ fail:function(){}
 
 8、removeFileItem(options)
 options 是一个object对象如下：
+<code>
 {
 paras:{
 	appid:xxx,
@@ -149,6 +156,7 @@ callback:{
 fail:function(){}
 }
 }
+</code>
 功能：删除一个文件对象
 
 说明：
@@ -156,7 +164,7 @@ fail:function(){}
 （1）	删除文件
 
 （2）	删除数据存储中对应的数据的key和value
-
+<code>
 9、removeAllFileItems(options)
 options 是一个object对象如下：
 {
@@ -168,10 +176,12 @@ callback:{
 fail:function(){}
 }
 }
+</code>
 功能：清除本域的所有文件对象，并且将数据存储中相应的key和value删除
 
 10、getFileStorageSize(options)
 options 是一个object对象如下：
+<code>
 {
 	appid:xxx,
 paras:{},
@@ -182,4 +192,5 @@ callback:{
 fail:function(){}
 }
 }
+</code>
 功能：获取文件存储空间剩余大小（只返回文件存储空间）
