@@ -34,7 +34,7 @@ options 是一个object对象如下：
 	paras:{
 		appid:xxx,
 		key:(string),
-		value:{}
+		value:(string)
 	},
 	callback:{
 		success:function(data){},
@@ -128,7 +128,7 @@ options 是一个object对象如下：
 	paras:{
 	   appid:xxx,
 	   key:xxx,
-	   value:”url”
+	   value:"url"
 	},
 	callback:{
 		success:function(data){},
