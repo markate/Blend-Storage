@@ -98,12 +98,12 @@ options 是一个object对象如下：
 ```javascript
 {
 	paras:{
-		 appid:xxx,
-	   key:xxx，
+		appid:xxx,
+		key:xxx,
 	 },
 	callback:{
 		success:function(data){},
-		fail:function(){}
+		fail:function(data){}
 	}
 }
 ```
@@ -127,7 +127,7 @@ options 是一个object对象如下：
 {
 	paras:{
 	   appid:xxx,
-	   key:xxx，
+	   key:xxx,
 	   value:”url”
 	},
 	callback:{
@@ -152,7 +152,7 @@ options 是一个object对象如下：
 {
 	paras:{
 		appid:xxx,
-		key:(string)
+		key:xxx
 	},
 	callback:{
 		success:function(data){},
