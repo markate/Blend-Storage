@@ -8,3 +8,34 @@ Blendui离线方案设计
 
 2、被动存储方案
 
+##目录
+
+
+一、	主动存储
+
+1、	getIDatatem(options)
+
+2、	setIDatatem(options)
+
+3、	removeDataItem(options)
+
+4、	removeAllDataItems(options)
+
+5、	getDataStorageSize(options)
+
+6、	getFileItem(options)
+
+7、	setFileItem(options)
+
+8、	removeFileItem(options)
+
+9、	removeAllFileItems(options)
+
+10、	getFileStorageSize(options)
+
+二、模版、数据离线存储方式
+
+1、模版缓存方案
+
+2、数据缓存方案
+
