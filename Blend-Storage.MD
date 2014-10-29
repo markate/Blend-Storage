@@ -12,20 +12,20 @@ Native创建文件对数据进行存储、查询、删除。
 
 options 是一个object对象如下：
 <p>
-	<code>
-		{
-			paras:{
-				appid:xxx,
-				key:(string)
-			},
-			callback:{
-				success:function(data){
-					//这里data代表返回的数据
-			},
-			fail:function(){}
-			}
-		}
-	</code>
+```javascript
+{
+	paras:{
+		appid:xxx,
+		key:(string)
+	},
+	callback:{
+		success:function(data){
+			//这里data代表返回的数据
+	},
+	fail:function(){}
+	}
+}
+```
 </p>
 功能：如存在则输出对应的JSON的字符串（下同）
 
