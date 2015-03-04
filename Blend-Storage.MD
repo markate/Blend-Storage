@@ -16,7 +16,7 @@
 	说明：请在Blend的init事件时引入cache组件
 
 	Blend.lightInit({
-		ak:'请输入你的',
+		ak:'xxx', /*ak是用户在百度开发者平台申请的appKey*/
 		module:['cache']
 	});
 	
