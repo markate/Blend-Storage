@@ -10,7 +10,15 @@
 -	&lt;meta&gt;标签
 
 #### set(options)
-	set(options)
+
+	Blend.device.cache.set(options)
+
+	说明：请在Blend的init事件时引入cache组件
+
+	Blend.lightInit({
+		ak:'请输入你的',
+		module:['cache']
+	});
 	
 **功能描述**
 
