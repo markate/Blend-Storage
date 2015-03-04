@@ -9,7 +9,7 @@
 -	remove(options)
 -	&lt;meta&gt;标签
 
-#### 用例：set(options)
+#### set(options)
 
 	Blend.lightInit({
 		ak:'xxx', /*ak是用户在百度开发者平台申请的appKey*/
@@ -75,7 +75,7 @@
 
 
 
-#### 用例：remove(options)
+#### remove(options)
 
 	Blend.lightInit({
 		ak:'xxx', /*ak是用户在百度开发者平台申请的appKey*/
