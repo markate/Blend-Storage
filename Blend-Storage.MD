@@ -153,9 +153,9 @@
 		Blend.device.cache.init();
 	});
 
+	在head中间加入：
 
-			
-<meta name="Cache-Type" content="text/css;text/js;text/gif">
+	<meta name="Cache-Type" content="text/css;text/js;text/gif">
 
 以上代码表示对于页面的css，js，gif静态资源启动资源拦截缓存功能。
 	
