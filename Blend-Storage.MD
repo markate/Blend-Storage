@@ -157,5 +157,5 @@
 
 	<meta name="Cache-Type" content="text/css;text/js;text/gif">
 
-以上代码表示对于页面的css，js，gif静态资源启动资源拦截缓存功能。
+以上代码表示对于页面的css，js，gif静态资源启动资源拦截缓存功能，该功能默认对于静态资源缓存fileData为1，对于当前的html缓存的fileData为2（即离线则使用缓存，在线则不使用缓存）
 	
