@@ -75,8 +75,15 @@
 
 
 
-#### remove(options)
-	remove(options)
+#### 用例：remove(options)
+
+	Blend.lightInit({
+		ak:'xxx', /*ak是用户在百度开发者平台申请的appKey*/
+		module:['cache']
+	});
+
+	Blend.device.cache.remove(options)
+	
 	
 **功能描述**
 
