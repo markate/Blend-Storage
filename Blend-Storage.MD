@@ -1,7 +1,7 @@
 ### Cache ###
 	Blend.device.cache
 	
-离线存储功能为用户提供可编程的离线能力。其主要包括cache.set、cache.remove、Meta离线标签等API
+离线存储功能为用户提供可编程的离线能力。其主要API接口包括cache.set、cache.remove、Meta离线标签等API
 
 **方法**
 
@@ -11,15 +11,13 @@
 
 #### set(options)
 
-	Blend.device.cache.set(options)
-
-	说明：请在Blend的init事件时引入cache组件
-
 	Blend.lightInit({
 		ak:'xxx', /*ak是用户在百度开发者平台申请的appKey*/
 		module:['cache']
 	});
-	
+
+	Blend.device.cache.set(options)
+
 **功能描述**
 
 在页面加载完成后，直接调用该API，可以将指定url资源下载并且保存到本地，下次访问时就会优先使用本地缓存。
