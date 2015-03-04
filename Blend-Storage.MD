@@ -146,12 +146,12 @@
 
 通过meta标签启动离线存储功能
 
-Blend.lightInit({
-	ak:'xxx', /*ak是用户在百度开发者平台申请的appKey*/
-	module:['cache']
-},function(){
-	Blend.device.cache.init();
-});
+	Blend.lightInit({
+		ak:'xxx', /*ak是用户在百度开发者平台申请的appKey*/
+		module:['cache']
+	},function(){
+		Blend.device.cache.init();
+	});
 
 
 			
