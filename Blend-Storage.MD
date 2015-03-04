@@ -1,200 +1,139 @@
-##一、主动存储
+### Cache ###
+	Blend.mbaas.cache
+	
+离线存储功能提供可编程离线的能力
 
-主动存储主要考虑通过runtime为web提供存储大规模数据、文件的条件（每个轻应用创建一个私有的自己的文件存储路径
+**方法**
 
-，以及数据存储文件），并且提供接口给用户进行调用。 其API列表如下：
+-	set(options)
+-	remove(options)
+-	&lt;meta&gt;标签
 
-组件名称：Blend.device.storage 
+#### set(options)
+	set(options)
+	
+**功能描述**
 
-Native创建文件对数据进行存储、查询、删除。
+在页面加载完成后，直接调用该API，可以将指定url资源下载并且保存到本地，下次访问时就会优先使用本地缓存。（）
 
-###1、getIDataItem(options)
 
-options 是一个object对象如下：
-```javascript
-{
-	paras:{
-		appid:xxx,
-		key:(string)
-	},
-	callback:{
-		success:function(data){
-			//这里data代表返回的数据
-	},
-	fail:function(){}
+**参数说明**
+- options是一个object，其中包括以下参数：
+
+<table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
+    <tbody>
+        <tr>
+            <th>参数</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>onsuccess</td>
+            <td>function(data){}</td>  
+            <td>成功回调用函数</td>  
+        </tr>
+        <tr>
+            <td>onfail</td>
+            <td>function(err){}</td>
+            <td>失败回调函数,参数为</td>   
+        </tr>
+         <tr>
+            <td>url</td>
+            <td>string</td>
+            <td>需要缓存资源的url</td>   
+        </tr>
+         <tr>
+            <td>filedata</td>
+            <td>int</td>
+            <td>拦截类型，1表示无论网络环境，对于存在于拦截列表中的url进行拦截，使用缓存资源，2表示对于仅仅网络离线的时候对url进行拦截，在web在线时候不进行拦截。</td>   
+        </tr>
+    </tbody>
+</table>
+
+**成功回调返回的data对象**
+	
+	{
+		error_code:0,
+		error_msg:"",
+		response:""
 	}
-}
-```
-功能：如存在则输出对应的JSON的字符串（下同）
 
-###2、setIDataItem(options)
-options 是一个object对象如下：
-```javascript
-{
-	paras:{
-		appid:xxx,
-		key:(string),
-		value:(string)
-	},
-	callback:{
-		success:function(data){},
-		fail:function(){}
+
+**失败回调返回的错误对象err**
+	
+	{
+		error_code:1,
+		error_msg:"",
+		response:""
 	}
-}
-```
-功能：设置存储的值。
-<code>
-###3、removeDataItem(options)
-options 是一个object对象如下：
-```javascript
-{
-	paras:{
-		appid:xxx,
-		key:(string)
-	},
-	callback:{
-		success:function(data){},
-		fail:function(){}
+
+
+
+#### remove(options)
+	remove(options)
+	
+**功能描述**
+
+删除缓存cache中的内容，让请求走正常http请求流程。
+
+**参数说明**
+- options是一个object，其中包括以下参数：
+
+<table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
+    <tbody>
+        <tr>
+            <th>参数</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>onsuccess</td>
+            <td>function(data){}</td>  
+            <td>成功回掉函数</td>  
+        </tr>
+        <tr>
+            <td>onfail</td>
+            <td>function(err){}</td>
+            <td>失败回调函数,参数为</td>   
+        </tr>
+         <tr>
+            <td>url</td>
+            <td>string</td>
+            <td>需要缓存资源的url</td>   
+        </tr>
+         <tr>
+            <td>filedata</td>
+            <td>int</td>
+            <td>拦截类型，1表示无论网络环境，对于存在于拦截列表中的url进行拦截，使用缓存资源，2表示对于仅仅网络离线或者2G的时候对url进行拦截，在web在线时候不进行拦截。</td>   
+        </tr>
+    </tbody>
+</table>
+
+**成功回调返回的data对象**
+	
+	{
+		error_code:0,
+		error_msg:"",
+		response:""
 	}
-}
-```
-功能：删除一个数据对象
 
-###4、removeAllDataItems(options)
-options 是一个object对象如下：
-```javascript
-{
-	paras:{
-		appid:xxx
-	},
-	callback:{
-		success:function(data){},
-		fail:function(){}
+
+**失败回调返回的错误对象err**
+	
+	{
+		error_code:1,
+		error_msg:"",
+		response:""
 	}
-}
-```
-功能：清除该域下所有的数据对象
-
-###5、getDataStorageSize(options)
-options 是一个object对象如下：
-```javascript
-{
-	paras:{
-		appid:xxx
-	},
-	callback:{
-	  success:function(data){
-		//size: 1024 
-	},
-	fail:function(){}
-	}
-}
-```
-功能：获取剩余的数据存储空间数据存储的剩余空间
-
-###6、getFileItem(options)
-
-options 是一个object对象如下：
-```javascript
-{
-	paras:{
-		appid:xxx,
-		key:xxx,
-	 },
-	callback:{
-		success:function(data){},
-		fail:function(data){}
-	}
-}
-```
-功能：获取文件的路径
-
-规则说明：
-
-存储文件实质上是存储数据+文件保存，即调用存储文件的api时，调用文件存储的api
-
-后，再调用setIDatatem方法存储key以及对应的文件路径。所以所有data存储
-
-中如果key 为 key  这种方式的则为文件存储。即getFileItem这个API也可以通过
-
-getIDatatem实现。
 
 
-###7、setFileItem(options)
 
-options 是一个object对象如下：
-```javascript
-{
-	paras:{
-	   appid:xxx,
-	   key:xxx,
-	   value:"url"
-	},
-	callback:{
-		success:function(data){},
-		fail:function(){}
-	}
-}
-```
-功能：存储文件
 
-存储文件实质上是存储数据+文件保存，即调用存储文件的api时，调用文件存
+####&lt;meta&gt;标签
 
-储的api后，再调用setIDatatem方法存储key以及对应的文件路径。所以所有data存
+页面增加&lt;meta&gt;标签 更为智能，方便。
+			
+	<meta name="Cache-Type" content="text/css;text/js;text/gif">
 
-储中如果key 为  blend-file-damain-key  这种方式的则为文件存储。（domain即url的
-
-域）
-
-###8、removeFileItem(options)
-options 是一个object对象如下：
-```javascript
-{
-	paras:{
-		appid:xxx,
-		key:xxx
-	},
-	callback:{
-		success:function(data){},
-		fail:function(){}
-	}
-}
-```
-功能：删除一个文件对象
-
-说明：
-
-（1）	删除文件
-
-（2）	删除数据存储中对应的数据的key和value
-
-###9、removeAllFileItems(options)
-options 是一个object对象如下：
-```javascript
-{
-	paras:{
-	  appid:xxx
-	},
-	callback:{
-		success:function(data){},
-		fail:function(){}
-	}
-}
-```
-功能：清除本域的所有文件对象，并且将数据存储中相应的key和value删除
-
-###10、getFileStorageSize(options)
-options 是一个object对象如下：
-```javascript
-{
-	appid:xxx,
-	paras:{},
-	callback:{
-	success:function(data){
-		//{size: 1024} 
-	},
-	fail:function(){}
-	}
-}
-```
-功能：获取文件存储空间剩余大小（只返回文件存储空间）
+以上代码表示对于页面的css，js，gif静态资源启动资源拦截缓存功能。
+	
