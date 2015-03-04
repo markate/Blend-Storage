@@ -144,9 +144,18 @@
 
 ####&lt;meta&gt;标签
 
-页面增加&lt;meta&gt;标签 更为智能，方便。
+通过meta标签启动离线存储功能
+
+Blend.lightInit({
+	ak:'xxx', /*ak是用户在百度开发者平台申请的appKey*/
+	module:['cache']
+},function(){
+	Blend.device.cache.init();
+});
+
+
 			
-	<meta name="Cache-Type" content="text/css;text/js;text/gif">
+<meta name="Cache-Type" content="text/css;text/js;text/gif">
 
 以上代码表示对于页面的css，js，gif静态资源启动资源拦截缓存功能。
 	
