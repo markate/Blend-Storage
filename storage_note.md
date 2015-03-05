@@ -54,6 +54,14 @@ Clouda离线存储一套可编程的离线缓存方案。其主要通过对本�
 
 上面这段表示缓存 "http://www.baidu.com" 这个资源。
 
+注意事项：
+
+1、 fileData目前有两个值：1、2，其中1代表 
+
+2、 将url以及下载的url地址存入本地数据库
+
+
+
 删除缓存：一些缓存如果过时了，我们需要删除可以调用cache.remove接口进行删除：
 
 	Blend.lightInit({
@@ -73,5 +81,6 @@ Clouda离线存储一套可编程的离线缓存方案。其主要通过对本�
 	};
 
 	Blend.device.cache.remove(option)
+
 
  
