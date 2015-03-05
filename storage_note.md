@@ -52,6 +52,7 @@ Clouda离线存储一套可编程的离线缓存方案。其主要通过对本�
 
 	Blend.device.cache.set(option)
 
-上面这段表示存储"http://www.baidu.com"这个资源
+上面这段表示存储 "http://www.baidu.com" 这个资源。
+
 
  
