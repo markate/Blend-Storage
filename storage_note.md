@@ -32,8 +32,26 @@ Clouda离线存储一套可编程的离线缓存方案。其主要通过对本�
 
 **Clouda离线存储的自主编程操作**
 
-在一些情况我们可能想自主缓存一些json数据、音乐文件、flash文件、影片文件，这时我们可以使用cache.set这个功能对离线缓存进行自主编程。
+在一些情况我们可能想自主缓存一些json数据、音乐文件、flash文件、影片文件，这时我们可以使用cache.set这个功能对离线cache进行自主编程。
+	
+	Blend.lightInit({
+		ak:'xxx', /*ak是用户在百度开发者平台申请的appKey*/
+		module:['cache']
+	});
 
+	var option = {
+		onsuccess:function(){
 
+		},
+		onfail:function(){
+
+		},
+		url:"http://www.baidu.com",
+		fileData:1 
+	};
+
+	Blend.device.cache.set(option)
+
+上面这段表示存储"http://www.baidu.com"这个资源
 
  
