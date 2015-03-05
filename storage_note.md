@@ -40,10 +40,10 @@ Clouda离线存储一套可编程的离线缓存方案。其主要通过对本�
 	});
 
 	var option = {
-		onsuccess:function(){
+		onsuccess:function(data){
 
 		},
-		onfail:function(){
+		onfail:function(data){
 
 		},
 		url:"http://www.baidu.com",
