@@ -115,7 +115,7 @@
             <td>需要缓存资源的url</td>   
         </tr>
          <tr>
-            <td>filedata</td>
+            <td>fileData</td>
             <td>int</td>
             <td>拦截类型，1表示无论网络环境，对于存在于拦截列表中的url进行拦截，使用缓存资源，2表示对于仅仅网络离线或者2G的时候对url进行拦截，在web在线时候不进行拦截。</td>   
         </tr>
